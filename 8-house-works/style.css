@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
+/*****************
+mixins
+*****************/
+/*****************
+basic styles
+*****************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+  background: #f7f7f7; }
+
+.container {
+  max-width: 1140px;
+  margin: auto; }
+
+nav {
+  background: #313131;
+  color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  nav div:nth-child(1) {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    nav div:nth-child(1) img {
+      width: 80px; }
+    nav div:nth-child(1) a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 20px;
+      font-size: 1.3rem; }
+  nav div:nth-last-child(2) {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+  nav div:nth-child(3) {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    nav div:nth-child(3) button {
+      padding: 15px 30px;
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      text-transform: none;
+      font-size: 1rem;
+      border-radius: 3px;
+      cursor: pointer; }
+      nav div:nth-child(3) button:hover {
+        background: #fff;
+        border: 2px solid #fff;
+        color: #313131;
+        transition: 0.4s ease; }
+
+header {
+  background-image: url(img/header.jpg);
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #fff; }
+  header h1 {
+    font-size: 3rem;
+    padding-bottom: 30px; }
+  header p {
+    font-size: .9rem;
+    padding-bottom: 30px;
+    text-align: center; }
+  header .l {
+    padding: 15px 30px;
+    background: #506df5;
+    border: 2px solid #506df5;
+    color: #fff;
+    text-transform: none;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer; }
+    header .l:hover {
+      background: #fff;
+      border: 2px solid #fff;
+      color: #313131;
+      transition: 0.4s ease; }
+  header .r {
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: none;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer; }
+    header .r:hover {
+      background: #fff;
+      border: 2px solid #fff;
+      color: #313131;
+      transition: 0.4s ease; }
+
+.price {
+  padding: 30px 120px;
+  text-align: center;
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .price article {
+    border: 2px solid #c7c6c6; }
+    .price article h5 {
+      color: #000000;
+      font-size: 1.8rem;
+      padding-bottom: 10px;
+      padding-top: 30px;
+      font-weight: 300; }
+    .price article h2 {
+      color: #012f5b;
+      font-size: 3.4rem;
+      font-weight: 500; }
+      .price article h2 .dol {
+        font-size: 1.5rem;
+        color: #012f5b;
+        padding-right: 3px; }
+      .price article h2 span {
+        color: #585858;
+        font-size: 1rem; }
+    .price article p {
+      color: #585858;
+      font-size: 10px;
+      padding: 30px; }
+    .price article button {
+      padding: 15px 30px;
+      background: transparent;
+      border: 2px solid #506df5;
+      color: #506df5;
+      text-transform: none;
+      font-size: 1rem;
+      border-radius: 3px;
+      cursor: pointer;
+      border-radius: 3px;
+      margin-bottom: 30px; }
+      .price article button:hover {
+        background: #fff;
+        border: 2px solid #fff;
+        color: #313131;
+        transition: 0.4s ease; }
+
+.work {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/bg2.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover; }
+  .work h2 {
+    padding-top: 50px;
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff; }
+  .work hr {
+    background: #fde21c;
+    width: 150px;
+    height: 4px;
+    border: none;
+    margin: 0 auto 50px auto; }
+  .work .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .work .container article {
+      flex: 0 0 30%;
+      background: 2px solid #fff;
+      border-radius: 10px;
+      background: #fff; }
+      .work .container article img {
+        width: 100%; }
+      .work .container article .text {
+        padding: 30px;
+        text-align: center; }
+        .work .container article .text h5 {
+          font-size: 2rem;
+          padding-bottom: 10px; }
+        .work .container article .text p {
+          font-size: 15px;
+          text-align: left; }
+        .work .container article .text button {
+          padding: 15px 30px;
+          background: transparent;
+          border: 2px solid #506df5;
+          color: #506df5;
+          text-transform: none;
+          font-size: 1rem;
+          border-radius: 3px;
+          cursor: pointer;
+          border-radius: 3px;
+          margin-bottom: 30px;
+          margin-top: 20px; }
+          .work .container article .text button:hover {
+            background: #fff;
+            border: 2px solid #fff;
+            color: #313131;
+            transition: 0.4s ease; }
+
+.team {
+  padding: 4rem 0;
+  height: 100vh; }
+  .team h2 {
+    font-size: 5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px; }
+  .team .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .team .container article {
+      flex: 0 0 48%;
+      margin-bottom: 50px;
+      box-shadow: 0 0 30px #d3d3d3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .team .container article:hover {
+        box-shadow: 0 0 50px #bababa; }
+      .team .container article div:first-child {
+        flex: 0 0 50%;
+        background: #fff;
+        padding: 30px; }
+        .team .container article div:first-child h4 {
+          font-size: 1.4rem;
+          font-weight: 500; }
+        .team .container article div:first-child h5 {
+          font-weight: 300;
+          font-size: 1.1rem; }
+        .team .container article div:first-child p {
+          font-size: .7rem;
+          padding: 10px 0; }
+        .team .container article div:first-child i {
+          color: #fde21c; }
+      .team .container article div:last-child {
+        flex: 0 0 50%; }
+        .team .container article div:last-child img {
+          width: 100%;
+          display: block; }
+
+.repair {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/bg2.jpg);
+  padding: 100px 0;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  color: #fff; }
+  .repair .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .repair .container article {
+      flex: 0 0 49%; }
+    .repair .container article:first-child {
+      border: 1px solid #fff;
+      padding: 50px 20px;
+      text-align: center; }
+      .repair .container article:first-child i {
+        color: #fde21c;
+        font-size: 7rem; }
+      .repair .container article:first-child h3 {
+        font-size: 1.5rem;
+        padding: 20px; }
+      .repair .container article:first-child p {
+        font-size: .7rem;
+        padding: 10px 0; }
+      .repair .container article:first-child button {
+        padding: 15px 30px;
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        text-transform: none;
+        font-size: 1rem;
+        border-radius: 3px;
+        cursor: pointer; }
+        .repair .container article:first-child button:hover {
+          background: #fff;
+          border: 2px solid #fff;
+          color: #313131;
+          transition: 0.4s ease; }
+    .repair .container article:last-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      flex-wrap: wrap; }
+      .repair .container article:last-child div {
+        flex: 0 0 33%;
+        padding: 50px; }
+
+.best {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4rem 0; }
+  .best article {
+    flex: 0 0 32%;
+    line-height: 1.6;
+    font-weight: 400; }
+  .best article:first-child h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 50px; }
+
+.cta {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #313131; }
+  .cta button:nth-child(1) {
+    padding: 15px 30px;
+    background: #fde21c;
+    border: 2px solid #fde21c;
+    color: #313131;
+    text-transform: none;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer; }
+    .cta button:nth-child(1):hover {
+      background: #fff;
+      border: 2px solid #fff;
+      color: #313131;
+      transition: 0.4s ease; }
+    .cta button:nth-child(1):hover {
+      background: transparent;
+      color: #fde21c;
+      border: 2px solid #fde21c; }
+  .cta button:nth-child(2) {
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: none;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 10px; }
+    .cta button:nth-child(2):hover {
+      background: #fff;
+      border: 2px solid #fff;
+      color: #313131;
+      transition: 0.4s ease; }
+  .cta button:nth-child(3) {
+    padding: 15px 30px;
+    background: #506df5;
+    border: 2px solid #506df5;
+    color: #fff;
+    text-transform: none;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer; }
+    .cta button:nth-child(3):hover {
+      background: #fff;
+      border: 2px solid #fff;
+      color: #313131;
+      transition: 0.4s ease; }
+    .cta button:nth-child(3):hover {
+      background: transparent;
+      color: #506df5;
+      border: 2px solid #506df5; }
+
+/*# sourceMappingURL=style.css.map */
